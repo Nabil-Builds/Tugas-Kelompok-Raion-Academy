@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public AudioSource soundSource;
+    public AudioClip sound;
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float fireRate = 0.2f;
@@ -52,6 +54,7 @@ public class Gun : MonoBehaviour
                     - rotasi: Quaternion.Euler(0f, 0f, angle - 90f)
             */
             Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, angle - 90f));
+            soundSource.PlayOneShot(sound);
 
             nextFireTime = Time.time + fireRate;
         }
