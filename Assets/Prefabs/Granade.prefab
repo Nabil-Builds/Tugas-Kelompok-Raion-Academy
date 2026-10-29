@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Granade
   lifeSpan: 1.5
   explosion: {fileID: 3343645777850905570, guid: 28562c9afefcb9144bc10f1b8796b683, type: 3}
+  explosionSound: {fileID: 8300000, guid: c69e66f24a9adaf4b9b1ccb2dbd21e87, type: 3}
 --- !u!1 &6819876427660850878
 GameObject:
   m_ObjectHideFlags: 0

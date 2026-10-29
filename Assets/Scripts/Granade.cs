@@ -10,6 +10,7 @@ public class Granade : MonoBehaviour
     private float elapsedTime = 0f;
     private float flightDuration;
     [SerializeField] GameObject explosion;
+    [SerializeField] AudioClip explosionSound;
 
     float maxHeight;
     private AnimationCurve trajectoryAnimationCurve;
@@ -51,12 +52,12 @@ public class Granade : MonoBehaviour
     void Explode()
     {
         if (explosion != null)
-    {
-        
+        {
         GameObject fx = Instantiate(explosion, transform.position, Quaternion.identity);
         
         Destroy(fx, 0.5f); 
-    }
+        }
+        AudioSource.PlayClipAtPoint(explosionSound, transform.position);
         Destroy(gameObject);
     }
 
