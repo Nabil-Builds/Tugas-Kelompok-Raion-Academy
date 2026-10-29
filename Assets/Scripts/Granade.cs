@@ -9,6 +9,7 @@ public class Granade : MonoBehaviour
     private Vector3 projectileStartPoint;
     private float elapsedTime = 0f;
     private float flightDuration;
+    [SerializeField] GameObject explosion;
 
     float maxHeight;
     private AnimationCurve trajectoryAnimationCurve;
@@ -49,6 +50,13 @@ public class Granade : MonoBehaviour
 
     void Explode()
     {
+        if (explosion != null)
+    {
+        
+        GameObject fx = Instantiate(explosion, transform.position, Quaternion.identity);
+        
+        Destroy(fx, 0.5f); 
+    }
         Destroy(gameObject);
     }
 

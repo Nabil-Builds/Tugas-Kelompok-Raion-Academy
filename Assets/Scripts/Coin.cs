@@ -1,11 +1,13 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] AudioSource source;
+
     [SerializeField] AudioClip sound;
     public int coinValue = 1;
+    [SerializeField] float lifeTime = 10;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,11 +22,19 @@ public class Coin : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void playSound()
     {
-        source.PlayOneShot(sound);
+        Vector3 soundPos = transform.position;
+        soundPos.z = Camera.main.transform.position.z;
+        AudioSource.PlayClipAtPoint(sound, transform.position, 1);
         print("SOUND PLAYED");
     }
 }

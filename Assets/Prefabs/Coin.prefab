@@ -83,9 +83,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529bede9e0e7b51428275dfb33859030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  source: {fileID: 2389959209774406927, guid: 4e6a44a62e4932440b70babe578550df, type: 3}
+  source: {fileID: 0}
   sound: {fileID: 8300000, guid: 369aea3b0cdab4e48ad399557e204091, type: 3}
   coinValue: 1
+  lifeTime: 30
 --- !u!50 &-104006923779081768
 Rigidbody2D:
   serializedVersion: 5
