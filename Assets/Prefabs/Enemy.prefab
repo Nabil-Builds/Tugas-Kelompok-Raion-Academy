@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6e0cec9b1d278489c146e129515ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  moveSpeed: 8
+  moveSpeed: 5
 --- !u!114 &7322718432409334246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,3 +1822,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 3
+  coin: {fileID: 3834641313601966152, guid: f24f30b119c95d04cab55b8101724a35, type: 3}

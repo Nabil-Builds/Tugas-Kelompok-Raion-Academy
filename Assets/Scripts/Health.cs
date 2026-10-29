@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentHealth;
+    [SerializeField] GameObject coin;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class Health : MonoBehaviour
         if (CompareTag("Enemy"))
         {
             LevelManager.instance.AddKill();
+            GameObject dropCoin = Instantiate(coin, transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);
