@@ -1700,7 +1700,7 @@ GameObject:
   - component: {fileID: 3455275962190095749}
   - component: {fileID: 8563519593245990536}
   - component: {fileID: 7322718432409334246}
-  - component: {fileID: 7041531241385203533}
+  - component: {fileID: 1884208684192864184}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1754,7 +1754,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 3
   coin: {fileID: 3834641313601966152, guid: f24f30b119c95d04cab55b8101724a35, type: 3}
---- !u!114 &7041531241385203533
+--- !u!114 &1884208684192864184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
